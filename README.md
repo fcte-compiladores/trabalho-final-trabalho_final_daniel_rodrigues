@@ -1,7 +1,7 @@
 # Colorizador de Código com Lexer e Interface Gráfica
 
 ## Integrantes
-- Daniel Rodrigues — Matrícula: 12345678 — Turma: 2025.1
+- Daniel Rodrigues Nascimento — Matrícula: 231037665 — Turma: 16:00-18:00
 
 ## Introdução
 Este projeto implementa um analisador léxico simples (**lexer**) que reconhece tokens de uma linguagem do estilo C e gera um arquivo HTML com **destaque de sintaxe colorido**.
