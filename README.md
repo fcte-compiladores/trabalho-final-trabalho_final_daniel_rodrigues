@@ -1,79 +1,70 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Hppw7Zh2)
-# Trabalho Final
+# Colorizador de Código com Lexer e Interface Gráfica
 
-## Escopo e organização
+## Integrantes
+- Daniel Rodrigues — Matrícula: 12345678 — Turma: 2025.1
 
-O trabalho é de tema livre dentro do escopo da disciplina de compiladores e
-consiste no desenvolvimento de alguma aplicação na área da disciplina (um
-interpretador para uma linguagem simples, compilador, analisadores de código,
-etc.)
+## Introdução
+Este projeto implementa um analisador léxico simples (**lexer**) que reconhece tokens de uma linguagem do estilo C e gera um arquivo HTML com **destaque de sintaxe colorido**.
 
-O trabalho pode ser feito em grupos de até 4 pessoas.
+A análise léxica é feita com expressões regulares (regex) e permite identificar diferentes tipos de tokens no código. A interface gráfica em **Tkinter** facilita a entrada do código e a geração do HTML.
 
-## Estrutura
+A linguagem reconhecida é um subconjunto de linguagens como C/C++/Java. A sintaxe esperada inclui:
 
-Os trabalhos devem ser entregues na atividade própria no [github-classrrom](...).
-Cada repositório deve ter uma estrutura parecida com a delineada abaixo:
+- **Palavras-chave:** `int`, `float`, `if`, `else`, `while`, `return`, etc.
+- **Números:** inteiros e decimais (`42`, `3.14`)
+- **Strings:** `"texto"` ou `"""multilinha"""`
+- **Caracteres:** `'a'`, `'\n'`
+- **Booleanos:** `true`, `false`
+- **Operadores:** `+`, `-`, `*`, `/`, `==`, `!=`, `>=`, etc.
+- **Comentários:** `// comentário de linha`
+- **Identificadores:** nomes de variáveis, funções, etc.
+- **Pontuação:** `{`, `}`, `(`, `)`, `[`, `]`, `;`, `,`
 
-* **README:** o arquivo README.md na base do repositório deve descrever os
-  detalhes da implementação do código. O README deve ter algumas seções 
-  obrigatórias:
-  - **Título**: nome do projeto
-  - **Integrantes**: lista com os nomes, matrículas e turma de cada integrante.
-  - **Introdução**: deve detalhar o que o projeto implementou, quais foram as
-    estratégias e algoritmos relevantes. Se o projeto implementa uma linguagem
-    não-comum ou um subconjunto de uma linguagem comum, deve conter alguns
-    exemplos de comandos nesta linguagem, descrendo a sua sintaxe e semântica,
-    quando necessário.
-  - **Instalação**: deve detalhar os passos para instalar as dependências e
-    rodar o código do projeto. Pode ser algo simples como *"Rode
-    `uv run lox hello.lox` para executar o interpretador."*, se a linguagem de
-    implementação permitir este tipo de facilidade.
+### Exemplo de código reconhecido:
 
-    Você pode usar gerenciadores de pacotes específicos de linguagens populares
-    como uv, npm, cargo, etc, containers Docker/Podman, ou `.nix`.
-  - **Exemplos**: o projeto deve conter uma pasta "exemplos" com alguns arquivos
-    na linguagem de programação implementada. Deve conter exemplos com graus
-    variáveis de complexidade. Algo como: hello world, fibonacci, função
-    recursiva, alguma estrutura de dados e para finalizar um algoritmo um pouco
-    mais elaborado como ordenamento de listas, busca binária, etc.
-    
-    Note que isto é apenas um guia da ordem de dificuldade dos problemas.
-    Algumas linguagens sequer permitem a implementação de alguns dos exemplos
-    acima.
-  - **Referências**: descreva as referências que você utilizou para a
-    implementação da linguagem. Faça uma breve descrição do papel de cada
-    referência ou como ela foi usada no projeto. Caso você tenha usado algum 
-    código existente como referência, descreva as suas contribuições originais
-    para o projeto.
-  - **Estrutura do código**: faça uma descrição da estrutura geral do código
-    discutindo os módulos, classes, estruturas de dados ou funções principais. 
-    Explicite onde as etapas tradicionais de compilação (análise léxica, 
-    sintática, semântica, etc) são realizadas, quando relevante.
-  - **Bugs/Limitações/problemas conhecidos**: discuta as limitações do seu
-    projeto e problemas conhecidos e coisas que poderiam ser feitas para
-    melhorá-lo no futuro. Note: considere apenas melhorias incrementais e não
-    melhorias grandes como: "reimplementar tudo em Rust".
-* **Código:** O codigo fonte deve estar presente no repositório principal junto com
-  a declaração das suas dependências. Cada linguagem possui um mecanismo
-  específico para isso, mas seria algo como o arquivo pyproject.toml em Python
-  ou package.json no caso de Javascript.
+int main() {
+    // Exemplo de programa
+    float pi = 3.14;
+    if (pi > 0) {
+        printf("Valor positivo");
+    }
+    return 0;
+}
 
-## Critérios
+## Instalação
 
-Cada trabalho começa com 100% e pode receber penalizações ou bônus de acordo com
-os critérios abaixo:
+Requisitos
 
-- Ausência do README: -50%
-- Instruções de instalação não funcionam: até -20%
-- Referências não atribuídas ou falta de referâncias: -10%
-- Código confuso ou mal organizado: até -15%
-- Falta de clareza em apresentar as técnicas e etapas de compilação: -15%
-- Bugs e limitações sérias na implementação: até -25%
-- Escopo reduzido, ou implementação insuficiente: até 25%
-- Uso de código não atribuído/plágio: até -100%
-- Repositório bem estruturado e organizado: até 10%
-- Linguagem com conceitos originais/interessantes: até +15%
-- Testes unitários: até +15%, dependendo da cobertura
+    Python 3.7 ou superior
 
-Após aplicar todos os bônus, a nota é truncada no intervalo 0-100%. 
+Instruções
+
+    Clone ou baixe este repositório.
+
+    Execute o arquivo da interface com:
+
+python3 gui.py
+
+Uma janela gráfica será aberta. Digite ou cole seu código na área de texto e clique em “Gerar HTML Colorido” para salvar o arquivo resultante.
+
+## Referências
+
+    Crafting Interpreters — livro que inspirou a organização do lexer
+
+    Documentação oficial do Python (re, tkinter)
+
+    Artigos e exemplos de syntax highlighting em HTML
+
+    StackOverflow (resolução de regex e expressões edge cases)
+
+## Bugs, Limitações e Melhorias Futuras
+
+    O lexer não trata erros léxicos como strings malformadas ou comentários aninhados.
+
+    Não há parsing nem análise semântica.
+
+    Reconhecimento limitado à sintaxe básica estilo C.
+
+    HTML gerado não possui preview embutido (precisa ser aberto no navegador).
+
+    Interface simples — pode ser expandida com suporte a temas, salvamento automático, múltiplos arquivos ou live preview.
