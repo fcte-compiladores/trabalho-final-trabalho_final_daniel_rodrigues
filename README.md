@@ -47,6 +47,10 @@ Execute o arquivo da interface com:
 
 Uma janela gráfica será aberta. Digite ou cole seu código na área de texto e clique em “Gerar HTML Colorido” para salvar o arquivo resultante.
 
+Execute:
+
+    xdg-open nome_que_salvou.html
+
 ## Referências
 
 Crafting Interpreters — livro que inspirou a organização do lexer
