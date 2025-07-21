@@ -35,36 +35,36 @@ int main() {
 
 Requisitos
 
-    Python 3.7 ou superior
+Python 3.7 ou superior
 
 Instruções
 
-    Clone ou baixe este repositório.
+Clone ou baixe este repositório.
 
-    Execute o arquivo da interface com:
+Execute o arquivo da interface com:
 
-python3 gui.py
+    python3 gui.py
 
 Uma janela gráfica será aberta. Digite ou cole seu código na área de texto e clique em “Gerar HTML Colorido” para salvar o arquivo resultante.
 
 ## Referências
 
-    Crafting Interpreters — livro que inspirou a organização do lexer
+Crafting Interpreters — livro que inspirou a organização do lexer
 
-    Documentação oficial do Python (re, tkinter)
+Documentação oficial do Python (re, tkinter)
 
-    Artigos e exemplos de syntax highlighting em HTML
+Artigos e exemplos de syntax highlighting em HTML
 
-    StackOverflow (resolução de regex e expressões edge cases)
+StackOverflow (resolução de regex e expressões edge cases)
 
 ## Bugs, Limitações e Melhorias Futuras
 
-    O lexer não trata erros léxicos como strings malformadas ou comentários aninhados.
+O lexer não trata erros léxicos como strings malformadas ou comentários aninhados.
 
-    Não há parsing nem análise semântica.
+Não há parsing nem análise semântica.
 
-    Reconhecimento limitado à sintaxe básica estilo C.
+Reconhecimento limitado à sintaxe básica estilo C.
 
-    HTML gerado não possui preview embutido (precisa ser aberto no navegador).
+HTML gerado não possui preview embutido (precisa ser aberto no navegador).
 
-    Interface simples — pode ser expandida com suporte a temas, salvamento automático, múltiplos arquivos ou live preview.
+Interface simples — pode ser expandida com suporte a temas, salvamento automático, múltiplos arquivos ou live preview.
